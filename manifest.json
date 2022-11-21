@@ -1,0 +1,10 @@
+{
+   "name": "Solved! Online",
+   "start_url": "https://enigma-games.com/SolvedOnline/",
+   "description": "A jigsaw puzzle solving adventure!",
+   "icons": [{
+     "src": "https://enigma-games.com/SolvedOnline/solved_online.png",
+     "sizes": "192x192",
+     "type": "image/png"
+   }]
+ }

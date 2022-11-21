@@ -1,0 +1,14 @@
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+<FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf|woff|woff2)(\.gz)?$">
+Header set Expires "Thu, 15 Apr 2022 20:00:00 GMT"
+Header unset ETag
+FileETag None
+</FilesMatch>
+<FilesMatch "\.(json|woff|woff2|js|css)$">
+  <IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+  </IfModule>
+</FilesMatch>
